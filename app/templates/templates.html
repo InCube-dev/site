@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta lang="ru" charset="utf-8" >
+    {% if title %}
+    <title>InCube :: {{title}}</title>
+    {% else %}
+    <title>InCube</title>
+    {% endif %}
+    {% if style %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/'+style+'.css') }}">
+    {% else %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/default.css') }}">
+    {% endif %}
+  </head>
+  <body>
+  <div class="maot">
+    <div class="top" >
+      <div id="top-per">
+        <a href="/">Главная</a>
+        <a href="/discord">Дискорд</a>
+        <a href="/buy">Покупка</a>
+        {% if user %}
+        <a id="username">{user.name}</a> <img id="userava" src="user.avatar"/>
+        {% else %}
+        <a id="login" href="/login">Войти</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+    <div class="bottum">
+      <div id="bottom-content">
+        <p>InCube Не является оффициальным продуктом компании Mojang или Microsoft</p>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

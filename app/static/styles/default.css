@@ -1,0 +1,36 @@
+body {
+    background-color: #312f2f;
+    margin: 0px;
+}
+
+a,p {
+    color: #ffe0e0;
+}
+
+.top{
+    height: 50px;
+    background-color: rgba(56, 56, 56, 0.616);
+    border-radius: 10px;
+    align-items: center;
+}
+
+#top-per {
+    position: absolute;
+    
+}
+
+.bottum {
+    height: 50px;
+    background-color: rgba(14, 14, 14, 0.699);
+    border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 100%;
+	height: 80px
+    
+}
+
+#bottom-content{
+    position: absolute;
+}
