@@ -32,4 +32,4 @@ def index():
 
 @app.route('/incubepass') # инкубпасс
 def index():
-    return render_template("incubepass.html")
+    return render_template("pass.html")
