@@ -6,23 +6,23 @@ def index():
     return render_template("index.html")
 
 @app.route('/discords') # дискорд сервера
-def index():
+def discords():
     return render_template("discords.html",title="Дисорды")
 
 @app.route('/options') # настройки
-def index():
+def options():
     return render_template("options.html",title="Настройки")
 
 @app.route('/profile') # профиль
-def index():
+def profile():
     return render_template("profiles.html",title="Профиль")
 
 @app.route('/wiki') # вики
-def index():
+def wiki():
     return render_template("wiki.html",title="Wiki")
 
 @app.route('/wiki/<string:player>') # вики игрока
-def index(player):
+def wikiPlayer(player):
     wiki = {
         "nick":"",
         "about":"",
@@ -32,13 +32,13 @@ def index(player):
     return render_template("wikiPlayer.html",wiki=wiki,title=wiki["nick"])
 
 @app.route('/content') # видео/стримы
-def index():
+def content():
     return render_template("contents.html",title="Контент")
 
 @app.route('/buy') # покупка
-def index():
+def buy():
     return render_template("buy.html",title="Покупка")
 
 @app.route('/incubepass') # инкубпасс
-def index():
+def inpass():
     return render_template("pass.html",title="InCube Pass")
