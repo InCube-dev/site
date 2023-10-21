@@ -2,11 +2,16 @@
 {% block content %}
 <table border="1" style="border-color: rgba(0,0,0,0);">
     <tr>
-        
+        {% for lvl in paidPass %}
+        {% endfor %}
     </tr>
-    <tr></tr>
     <tr>
-
+        {% for lvl in compleetPass %}
+        {% endfor %}
+    </tr>
+    <tr>
+        {% for lvl in freePass %}
+        {% endfor %}
     </tr>
 </table>
 {% endblock %}
