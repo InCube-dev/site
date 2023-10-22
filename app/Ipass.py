@@ -1,11 +1,6 @@
 from app import app
 from flask import render_template
-import mysql.connector
-session = mysqlx.get_session(
-   host="",
-   user="",
-   port=0,
-   password="")
+import sqlHandler
 
 @app.route('/incubepass') # инкубпасс
 def inpass():
