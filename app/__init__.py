@@ -5,5 +5,3 @@ app = Flask(
     static_folder='static'
     )
 from app import views,Ipass,wiki
-import sqlHandler
-sqlHandler.starts()

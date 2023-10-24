@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta lang="ru" charset="utf-8" >
+    <meta lang="ru" charset="utf-8">
     {% if title %}
     <title>InCube :: {{title}}</title>
     {% else %}
@@ -14,23 +14,27 @@
     {% endif %}
   </head>
   <body>
-  <div class="maot">
     <div class="top" >
-      <a href="/">Главная</a>
-      <a href="/discords">Дискорд</a>
-      <a href="/buy">Покупка</a>
+      <img 
+      style="border-radius: 4px;"
+      width="40px" 
+      height="40px" 
+      src="{{ url_for('static',filename='img/icon.png') }}">
+      <a id="main" href="/"><b>Главная</b></a>
+      <a href="/"><b>Магазин</b></a>
+      <a href="/"><b>Вики</b></a>
+      <a href="/"><b>О сервере</b></a>
       {% if user %}
-      <a id="username">{user.name}</a> <img id="userava" src="user.avatar"/>
+      <a id="user"><b>{user.name}</b></a> <img id="userava" src="user.avatar"/>
       {% else %}
-      <a id="login" href="/login">Войти</a>
+      <a id="login" href="/login"><b>Войти</b></a>
       {% endif %}
     </div>
     <div class="content">
       {% block content %}{% endblock %}
     </div>
-    <div class="bottum">
+    <footer>
       <p>InCube Не является оффициальным продуктом компании Mojang или Microsoft</p>
-    </div>
-  </div>
+    </footer>
   </body>
 </html>
