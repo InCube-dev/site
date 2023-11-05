@@ -14,27 +14,14 @@
     {% endif %}
   </head>
   <body>
-    <div class="top" >
-      <img 
-      style="border-radius: 4px;"
-      width="40px" 
-      height="40px" 
-      src="{{ url_for('static',filename='img/icon.png') }}">
-      <a id="main" href="/"><b>Главная</b></a>
-      <a href="/"><b>Магазин</b></a>
-      <a href="/"><b>Вики</b></a>
-      <a href="/"><b>О сервере</b></a>
-      {% if user %}
-      <a id="user"><b>{user.name}</b></a> <img id="userava" src="user.avatar"/>
-      {% else %}
-      <a id="login" href="/login"><b>Войти</b></a>
-      {% endif %}
-    </div>
-    <div class="content">
+    <header width="100%" >
+      <img >
+    </header>
+    <main>
       {% block content %}{% endblock %}
-    </div>
+    </main>
     <footer>
-      <p>InCube Не является оффициальным продуктом компании Mojang или Microsoft</p>
+      
     </footer>
   </body>
 </html>
